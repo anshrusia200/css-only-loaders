@@ -1,4 +1,4 @@
-# 🚀 html-archives
+# 🚀 CSS Loaders
 
 In this repository, you can find CSS-only loaders that beginners can use for their first web project.
 
