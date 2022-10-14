@@ -1,0 +1,23 @@
+.pulsing {
+    width:65px;
+    height:117px;
+    position:relative;
+  }
+  .pulsing:before,
+  .pulsing:after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#ff8001;    
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);;
+  }
+  
+  .pulsing:after {
+    animation:pl 1s infinite;
+    transform:perspective(300px) translateZ(0px)
+  }
+  
+  @keyframes pl {
+    to {transform:perspective(300px) translateZ(180px);opacity:0}
+  }
