@@ -1,0 +1,20 @@
+.wobbling{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:radial-gradient(at 30% 30%,#0000,#000a) red;
+    position: relative;
+    left:0px;
+    top: 0px;
+    animation: 
+      w-1 0.6s, 
+      w-2 0.3s;
+    animation-timing-function:cubic-bezier(.5,-200,.5,200);
+    animation-iteration-count:infinite;
+  }
+  @keyframes w-1 { 
+      100% { left:1px; } 
+  }
+  @keyframes w-2 { 
+      100% { top :0.3px; } 
+  }
