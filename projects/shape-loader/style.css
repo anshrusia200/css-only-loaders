@@ -1,0 +1,33 @@
+.shapes {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    animation: sh-0 1.5s infinite linear;
+  }
+  .shapes:before,
+  .shapes:after {
+    content: "";
+    grid-area: 1/1;
+    background:#514b82;
+    animation: 
+      sh-1 1.5s infinite linear,
+      sh-2 1.5s infinite linear;
+  }
+  .shapes:after {
+    --s:-1;
+    animation-direction: reverse;
+  }
+  
+  @keyframes sh-0 {
+    0%,9%,91%,100% {background:#514b82}
+    10%,90%        {background:#0000}
+  }
+  @keyframes sh-1 {
+    0%,33%   {clip-path: polygon(0   0,50% 100%,100% 0,100% 100%,0 100%)}
+    66%,100% {clip-path: polygon(50% 0,50% 100%,50%  0,100% 100%,0 100%)}
+  }
+  @keyframes sh-2 {
+    0%,10%,90%,100% {transform: scale(var(--s,1)) translateY(0)}
+    33%,66%         {transform: scale(var(--s,1)) translateY(50%)}
+  }
+  
