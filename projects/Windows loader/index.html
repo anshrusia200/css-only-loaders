@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Colors */
+        .loading-flag--wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .loading-flag--content {
+            position: absolute;
+            display: flex;
+            width: 204px;
+            flex-flow: wrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loading-flag--flag {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin-bottom: 12px;
+            margin-right: 2px;
+            opacity: 0;
+            animation: fade-in 0.3s ease-in forwards;
+        }
+
+        .loading-flag--flag:first-child .stripe {
+            background-color: #f35326;
+        }
+
+        .loading-flag--flag:nth-child(2) .stripe {
+            background-color: #81bb07;
+        }
+
+        .loading-flag--flag:nth-child(3) .stripe {
+            background-color: #00a6f0;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(1) {
+            animation-delay: -0.1s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(3) {
+            animation-delay: -0.3s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(4) {
+            animation-delay: -0.4s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(5) {
+            animation-delay: -0.5s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(6) {
+            animation-delay: -0.6s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(7) {
+            animation-delay: -0.7s;
+        }
+
+        .loading-flag--flag:nth-child(odd) .stripe:nth-child(8) {
+            animation-delay: -0.8s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(1) {
+            animation-delay: -0.9s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(2) {
+            animation-delay: -1s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(3) {
+            animation-delay: -1.1s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(4) {
+            animation-delay: -1.2s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(5) {
+            animation-delay: -1.3s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(6) {
+            animation-delay: -1.4s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(7) {
+            animation-delay: -1.5s;
+        }
+
+        .loading-flag--flag:nth-child(even) .stripe:nth-child(8) {
+            animation-delay: -1.6s;
+        }
+
+        .loading-flag--flag .stripe {
+            width: 8px;
+            height: 100px;
+            background: #ffba0b;
+            display: inline-block;
+            animation: slide 0.8s ease-in-out infinite alternate;
+        }
+
+        @-moz-keyframes slide {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        @-o-keyframes slide {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        @keyframes slide {
+            to {
+                transform: translateY(20%);
+            }
+        }
+
+        @-moz-keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-flag--wrapper">
+        <div class="loading-flag--content">
+            <div class="loading-flag--flag">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+            <div class="loading-flag--flag">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+            <div class="loading-flag--flag">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+            <div class="loading-flag--flag">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
