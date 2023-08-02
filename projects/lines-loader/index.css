@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .loader {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+  
+  .loader-circle,
+  .loader-line {
+    position: absolute;
+    border-radius: 50%;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .loader-circle {
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-top: 4px solid #007bff;
+    animation-name: spin;
+  }
+  
+  .loader-line {
+    width: 4px;
+    height: 30px;
+    background-color: #007bff;
+    top: 25px;
+    left: 40px;
+    transform-origin: 50% 100%;
+    animation-name: stretch;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes stretch {
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+    }
+    20% {
+      transform: scaleY(1);
+    }
+  }
+
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    animation: fadeInOut 1s linear infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+  }
